@@ -2,7 +2,12 @@
 const nextConfig = {
 
     images:{
-        domains:["m.media-amazon.com"]
+        domains:["m.media-amazon.com",
+                "fakestoreapi.com",
+                "w7.pngwing.com",
+                "png.pngtree.com",
+                "encrypted-tbn0.gstatic.com"
+        ]
     }
 };
 
