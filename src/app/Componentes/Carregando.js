@@ -1,5 +1,6 @@
 import Image from "next/image";
 export default function Carregando(){
+
     return(
         <Image 
         width={100}
@@ -7,4 +8,5 @@ export default function Carregando(){
         src='/3-dots-bounce.svg'
         alt='Imagem carregando'/>
     )
+    
 }
