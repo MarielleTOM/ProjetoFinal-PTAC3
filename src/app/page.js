@@ -10,6 +10,7 @@ export default function Home() {
   const [listaProduct, setListaProdudt] = useState ([]);
   const [listaComplete, setListaComplete] = useState ([]);
   const [search, setSearch] = useState("");
+  const [searchColor, setSearchColor] = useState("");
   const [errorFatch, setErrorFatch] = useState (false);
 
   useEffect(() => {
@@ -70,6 +71,18 @@ export default function Home() {
       produtos.bolsa.toUpperCase().trim().includes(search.toUpperCase().trim()))
     setListaProdudt(newList);
   }
+  const searchCor = (text) => {
+    setSearchColor(text);
+
+    if(text.trim()==""){
+      setListaProdudt(listaComplete);
+      return
+    }
+
+    const newList = listaProduct.filter((produtos)=>
+      produtos.cor.toUpperCase().trim().includes(searchColor.toUpperCase().trim()))
+    setListaProdudt(newList);
+  }
 
   if(errorFatch == true){
     return <ErrorGetData/>
@@ -86,15 +99,19 @@ export default function Home() {
     <div>
       <input type="text" value={search} placeholder="Pesquise o produto!" 
       onChange={(event)=> searchText(event.target.value)}/>
+
+      <input type="text" value={searchColor} placeholder="Pesquise a Cor!" 
+      onChange={(event)=> searchCor(event.target.value)}/>
+
+
       <button onClick={orderAz}>A-Z</button>
       <button onClick={orderZa}>Z-A</button>
       <button onClick={ordermaior}>maior</button>
       <button onClick={ordermenor}>menor</button>
     </div>
+    <main className={styles.main}>
       {listaProduct.map((data) => 
-        <div key={data.id}>
-        <br />
-        <div className={styles.card}>
+        <div key={data.id} className={styles.card}>
             <p>{data.bolsa}</p>
             <div>
                 <Image
@@ -109,8 +126,9 @@ export default function Home() {
             Ver Mais
             </Link>
         </div>
-    </div>
+    
     )};   
+    </main>
   </>
   );
 }
