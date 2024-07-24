@@ -1,28 +1,21 @@
-
+import styles from "./menu.module.css";
 import Image from "next/image";
-
+import Logo from "./LogoMB.png"
 export default function Menu() {
     return (
         <header>
-            <nav>
+            <nav className={styles.cabecalho}>
                 <div >
                     <Image
                         width={100}
                         height={100}
-                        src="https://w7.pngwing.com/pngs/802/729/png-transparent-zara-logo-icon.png"
+                        src={Logo}
                     />
                 </div>
                 <div>
                     <h1>Marizinha e Bravas SHOP</h1>  
                 </div>
-                <div>
-                    <button>Add produtos</button>
-                    <Image
-                        width={30}
-                        height={30}
-                        src="https://png.pngtree.com/png-clipart/20191120/original/pngtree-shopping-cart-line-icon-vector-png-image_5058494.jpg"
-                    />
-                </div>
+               
             </nav>
         </header>
     )

@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Carregando from "../app/Componentes/Carregando";
 import ErrorGetData from "../app/Componentes/ErrorGetData";
-
+import styles from "./page.module.css"
+import Link from "next/link";
 export default function Home() {
 
   const [listaProduct, setListaProdudt] = useState ([]);
@@ -93,7 +94,7 @@ export default function Home() {
       {listaProduct.map((data) => 
         <div key={data.id}>
         <br />
-        <div >
+        <div className={styles.card}>
             <p>{data.bolsa}</p>
             <div>
                 <Image
@@ -104,6 +105,9 @@ export default function Home() {
             <p>R${data.preco}</p>
             <p>{data.cor}</p>
             <p>{data.tamanho}</p>
+            <Link className={styles.link} href={"/Bolsa/" + data.id}>
+            Ver Mais
+            </Link>
         </div>
     </div>
     )};   

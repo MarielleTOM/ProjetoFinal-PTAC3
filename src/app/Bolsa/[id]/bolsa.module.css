@@ -8,3 +8,23 @@
     background-color: rgb(196, 196, 196);
     text-align: center; 
 }
+.bolsa {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.preco {
+    font-size: 18px;
+    color: #000000; 
+    margin-bottom: 5px;
+}
+
+.cor{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.img {
+    margin-top: 20px;
+}
