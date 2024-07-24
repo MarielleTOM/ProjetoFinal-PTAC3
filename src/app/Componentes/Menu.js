@@ -1,11 +1,11 @@
-import Styles from "./menu.module.css";
+
 import Image from "next/image";
 
 export default function Menu() {
     return (
         <header>
-            <nav className={Styles.cabecalho}>
-                <div className={Styles.logo}>
+            <nav>
+                <div >
                     <Image
                         width={100}
                         height={100}
@@ -13,10 +13,10 @@ export default function Menu() {
                     />
                 </div>
                 <div>
-                    <h1>ZARA SHOP</h1>  
+                    <h1>Marizinha e Bravas SHOP</h1>  
                 </div>
                 <div>
-                    <button className={Styles.botao}>Add produtos</button>
+                    <button>Add produtos</button>
                     <Image
                         width={30}
                         height={30}

@@ -6,7 +6,10 @@ const nextConfig = {
                 "fakestoreapi.com",
                 "w7.pngwing.com",
                 "png.pngtree.com",
-                "encrypted-tbn0.gstatic.com"
+                "encrypted-tbn0.gstatic.com",
+                "www.melissa.com.br",
+                "cdn-images.farfetch-contents.com",
+                "t-static.dafiti.com.br"
         ]
     }
 };
